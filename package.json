@@ -16,5 +16,14 @@
   "license": "MIT",
   "dependencies": {
     "boom": "^2.4.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scottcorgan/express-boom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/scottcorgan/express-boom/issues"
+  },
+  "homepage": "https://github.com/scottcorgan/express-boom"
 }
