@@ -1,0 +1,20 @@
+{
+  "name": "express-boom",
+  "version": "0.1.0",
+  "description": "Boom response objects in Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Hapi",
+    "Boom",
+    "Express",
+    "response"
+  ],
+  "author": "Scott Corgan",
+  "license": "MIT",
+  "dependencies": {
+    "boom": "^2.4.2"
+  }
+}
