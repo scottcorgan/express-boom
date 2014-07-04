@@ -10,7 +10,12 @@ module.exports = function () {
       if (typeof boom[key] !== 'function') return;
       
       res.boom[key] = function (msg) {
-        var data = boom[key](msg);
+        var boomed = boom[key].apply(this, arguments);
+
+        if (boomed.data) {
+          boomed.output.payload.data = boomed.data;
+        }
+
         res.send(data.output.statusCode, data.output.payload);
       };
     });
