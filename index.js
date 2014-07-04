@@ -16,7 +16,7 @@ module.exports = function () {
           boomed.output.payload.data = boomed.data;
         }
 
-        res.send(data.output.statusCode, data.output.payload);
+        res.send(boomed.output.statusCode, boomed.output.payload);
       };
     });
     
