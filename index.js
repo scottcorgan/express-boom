@@ -12,7 +12,7 @@ module.exports = function () {
       res.boom[key] = function () {
         var boomed = boom[key].apply(this, arguments);
 
-        res.send(boomed.output.statusCode, boomed.output.payload);
+        res.status(boomed.output.statusCode).send(boomed.output.payload);
       };
     });
 
