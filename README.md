@@ -23,4 +23,4 @@ app.use(function (req, res) {
 });
 ```
 
-For a complete list of methods, see the [Boom docs](https://github.com/spumko/boom#list-of-friendly-errors-available)
+For a complete list of methods, see the [Boom docs](https://github.com/hapijs/boom#overview)
