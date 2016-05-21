@@ -1,6 +1,6 @@
 {
   "name": "express-boom",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Boom response objects in Express",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "author": "Scott Corgan",
   "license": "MIT",
   "dependencies": {
-    "boom": "^3.0.0"
+    "boom": "3.2.x"
   },
   "devDependencies": {},
   "repository": {
