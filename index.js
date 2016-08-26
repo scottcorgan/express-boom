@@ -16,9 +16,13 @@ module.exports = function () {
         };
       } else {
         res.boom[key] = function () {
-          var boomed = boom[key].apply(boom, arguments);
-  
-          return res.status(boomed.output.statusCode).send(boomed.output.payload);
+          var boomed = boom[key].apply(boom, arguments),
+            payload = boomed.output.payload;
+            // check for data object. If it's not empty we add it to the payload. 
+          if(boomed.data && (Object.keys(boomed.data).length !== 0 || (Object.keys(boomed.data).length === 0 && boomed.data.constructor !== Object))) {
+            payload.data = boomed.data;
+          }
+          return res.status(boomed.output.statusCode).send(payload);
         };
       }
     });
