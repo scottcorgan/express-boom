@@ -25,7 +25,7 @@ app.use(function (req, res) {
 app.use(function (req, res) {
   // some validation check fail and returns an object : reasons
   
-  return res.boom.badRequest('Validation didn't suceed', reasons); // Responds usual Boom message with additionnal infos.
+  return res.boom.badRequest("Validation didn't suceed", reasons); // Responds usual Boom message with additionnal infos.
 });
 ```
 
