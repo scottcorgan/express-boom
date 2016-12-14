@@ -9,7 +9,7 @@ module.exports = function () {
 
     Object.keys(boom).forEach(function (key) {
       if (typeof boom[key] !== 'function') return;
-      
+
       if (helperMethods.indexOf(key) !== -1) {
         res.boom[key] = function () {
           return boom[key].apply(boom, arguments);
@@ -17,8 +17,10 @@ module.exports = function () {
       } else {
         res.boom[key] = function () {
           var boomed = boom[key].apply(boom, arguments);
-  
-          return res.status(boomed.output.statusCode).send(boomed.output.payload);
+
+          var boomedPayloadAndAditionnalResponse = Object.assign(boomed.output.payload, arguments[1])
+
+          return res.status(boomed.output.statusCode).send(boomedPayloadAndAditionnalResponse);
         };
       }
     });
