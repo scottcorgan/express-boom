@@ -16,8 +16,6 @@ module.exports = function () {
         };
       } else {
         res.boom[key] = function () {
-          if (typeof arguments[1] !== 'object') throw new Error('additionnal response must be an object.')
-
           var boomed = boom[key].apply(boom, arguments);
 
           var boomedPayloadAndAditionnalResponse = Object.assign(boomed.output.payload, arguments[1])
