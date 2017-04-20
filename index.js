@@ -18,9 +18,9 @@ module.exports = function () {
         res.boom[key] = function () {
           var boomed = boom[key].apply(boom, arguments);
 
-          var boomedPayloadAndAditionnalResponse = Object.assign(boomed.output.payload, arguments[1])
+          var boomedPayloadAndAdditionalResponse = Object.assign(boomed.output.payload, arguments[1])
 
-          return res.status(boomed.output.statusCode).send(boomedPayloadAndAditionnalResponse);
+          return res.status(boomed.output.statusCode).send(boomedPayloadAndAdditionalResponse);
         };
       }
     });
