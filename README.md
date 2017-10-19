@@ -27,6 +27,8 @@ app.use(function (req, res) {
   
   res.boom.badRequest("Validation didn't suceed", reasons); // Responds Boom message + reasons object
 });
+
+app.listen(4444);
 ```
 
 For a complete list of methods, see the [Boom docs](https://github.com/hapijs/boom#overview)
