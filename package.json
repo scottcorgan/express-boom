@@ -15,7 +15,7 @@
   "author": "Scott Corgan",
   "license": "MIT",
   "dependencies": {
-    "boom": "3.2.x"
+    "boom": "^7.3.x"
   },
   "devDependencies": {},
   "repository": {
