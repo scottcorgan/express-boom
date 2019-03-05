@@ -4,7 +4,7 @@
   "description": "Boom response objects in Express",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/index-test.js"
   },
   "keywords": [
     "Hapi",
@@ -17,7 +17,10 @@
   "dependencies": {
     "boom": "^7.3.x"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^6.0.1",
+    "node-mocks-http": "^1.7.3"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/scottcorgan/express-boom.git"
