@@ -7,7 +7,7 @@ module.exports = function () {
 
     res.boom = {};
 
-    Object.keys(boom).forEach(function (key) {
+    Object.getOwnPropertyNames(boom).forEach(function (key) {
       if (typeof boom[key] !== 'function') return;
 
       if (helperMethods.indexOf(key) !== -1) {
