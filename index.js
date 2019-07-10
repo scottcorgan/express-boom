@@ -1,4 +1,4 @@
-var boom = require('boom');
+var boom = require('@hapi/boom');
 var helperMethods = ['wrap', 'create'];
 
 module.exports = function () {
