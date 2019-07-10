@@ -15,7 +15,7 @@
   "author": "Scott Corgan",
   "license": "MIT",
   "dependencies": {
-    "boom": "^7.3.x"
+    "@hapi/boom": "^7.4.2"
   },
   "devDependencies": {
     "mocha": "^6.0.1",
